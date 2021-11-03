@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="" />
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Добавились файлы после мержда">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Emitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Emitter.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="генерация_шариков" />
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="генерация_шариков" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Destroyer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HealthPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Score.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/ProjectSettings/TimeManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20Pvsub40RbGMdNC583ssnUMEna" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635959246774</updated>
-      <workItem from="1635959251193" duration="2941000" />
+      <workItem from="1635959251193" duration="5457000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -72,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635962115141</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавились файлы после мержда">
+      <created>1635962281895</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635962281895</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -89,7 +114,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="генерация_шариков" />
+                        <option value="Система_здоровья" />
                       </list>
                     </value>
                   </entry>
@@ -104,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Спавнит шарики в рандомной позиции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Спавнит шарики в рандомной позиции" />
+    <MESSAGE value="Добавились файлы после мержда" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавились файлы после мержда" />
   </component>
 </project>
