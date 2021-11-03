@@ -32,6 +32,8 @@ public class Emitter : MonoBehaviour
     {
         var spawnPosition = new Vector2(GetRandomX(), transform.position.y);
         var ball = Instantiate(ballPrefab, spawnPosition, Quaternion.identity);
+
+        ball.transform.parent = transform;
     }
 
     private float GetRandomX() => Random.Range(_leftXBound, _rightXBound);
