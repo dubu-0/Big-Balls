@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Изменился файл после мерджа">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Emitter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Emitter.cs" afterDir="false" />
-    </list>
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="система_очков" />
+    <option name="BRANCH" value="шарики_имеют_разные_параметры" />
     <option name="OPTIONS">
       <set>
         <option value="NO_FF" />
@@ -124,7 +119,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Система_здоровья" />
+                        <option value="ускорение_со_временем" />
                       </list>
                     </value>
                   </entry>
