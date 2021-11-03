@@ -5,11 +5,14 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] private float speed = 5;
     [SerializeField] private int score = 3;
-    [SerializeField] private int damage = 4;
+    [SerializeField] private int damage = 1;
     [SerializeField] private Color color = Color.blue;
 
+    private Score _scoreUI;
+    
     private void Start()
     {
+        _scoreUI = FindObjectOfType<Score>();
         GetComponent<SpriteRenderer>().color = color;
     }
 
@@ -20,8 +23,11 @@ public class Ball : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Got CLick");
+        _scoreUI.Add(score);
+        Destroy(gameObject);
     }
+
+    public int GetDamage() => damage;
 
     private void MoveDown()
     {
