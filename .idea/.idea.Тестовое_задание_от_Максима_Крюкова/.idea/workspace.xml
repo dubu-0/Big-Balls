@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Добавил эффект взрыва">
-      <change beforePath="$PROJECT_DIR$/Assets/ExplosionFx.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Добавил виньетку и FXAA" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="рефакторинг" />
+        <entry key="$PROJECT_DIR$" value="пост_обработка" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,8 +28,10 @@
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/75/75ef0353/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/ExplosionFx.cs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Prefabs/Ball.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ExplosionFx.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20Pvsub40RbGMdNC583ssnUMEna" />
@@ -133,7 +133,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636053056324</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Изменились файлы после мерджа">
+      <created>1636061690853</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636061690853</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавил виньетку и FXAA">
+      <created>1636062642769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636062642769</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -150,7 +164,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="пост_обработка" />
                       </list>
                     </value>
                   </entry>
@@ -171,6 +185,8 @@
     <MESSAGE value="Все шарики ускоряются со временем" />
     <MESSAGE value="Баг исправлен" />
     <MESSAGE value="Добавились мета файлы после мерджа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавились мета файлы после мерджа" />
+    <MESSAGE value="Изменились файлы после мерджа" />
+    <MESSAGE value="Добавил виньетку и FXAA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил виньетку и FXAA" />
   </component>
 </project>
