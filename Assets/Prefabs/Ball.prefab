@@ -134,4 +134,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e91112925173a40b9608312d1eb141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prohibitedColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
+  forbiddenColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
+  increaseSpeedEverySeconds: 1
