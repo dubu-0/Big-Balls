@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forbiddenColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
-  increaseSpeedEverySeconds: 1
+  increaseSpeedEverySeconds: 10
   explosionFx: {fileID: 2624408101206152483}
 --- !u!1001 &5773417120592522474
 PrefabInstance:
