@@ -8,6 +8,7 @@ namespace Ball
     {
         [SerializeField] private Color forbiddenColor;
         [SerializeField] private int increaseSpeedEverySeconds = 12;
+        [SerializeField] private ExplosionFx explosionFx;
     
         private Score _scoreUI;
         private SpriteRenderer _spriteRenderer;
@@ -22,6 +23,8 @@ namespace Ball
             BallStatsProvider = new BallStatsProvider(forbiddenColor, increaseSpeedEverySeconds);
             _spriteRenderer.color = BallStatsProvider.Color;
             transform.localScale *= BallStatsProvider.Diameter;
+            
+            explosionFx.SetBall(this);
         }
 
         private void Update()
@@ -32,6 +35,7 @@ namespace Ball
         private void OnMouseDown()
         {
             _scoreUI.Add(BallStatsProvider.Score);
+            explosionFx.Play(transform.position);
             Destroy(gameObject);
         }
 
