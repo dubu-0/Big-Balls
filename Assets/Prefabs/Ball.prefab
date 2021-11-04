@@ -134,8 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e91112925173a40b9608312d1eb141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreUI: {fileID: 4491660673084883457, guid: 9ef033ea63965314486b4d7fd4234e2d, type: 3}
-  speed: 5
-  score: 3
-  damage: 1
-  color: {r: 0, g: 0, b: 1, a: 1}
+  prohibitedColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}

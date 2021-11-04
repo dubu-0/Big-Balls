@@ -5,6 +5,8 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Ball : MonoBehaviour
 {
+    [SerializeField] private Color prohibitedColor;
+    
     private int _score = 3;
     private int _damage = 1;
     private Score _scoreUI;
@@ -60,21 +62,23 @@ public class Ball : MonoBehaviour
 
     private Color GetRandomColor()
     {
-        var r = Random.Range(0f, 1f);
-        var g = Random.Range(0f, 1f);
-        var b = Random.Range(0f, 1f);
-        var a = Random.Range(0.6f, 0.95f);
+        const float prohibitedRange = 255 * 0.05f;
+        
+        var r = Random.Range(0f, prohibitedColor.r - prohibitedRange) + Random.Range(prohibitedColor.r + prohibitedRange, 1f);
+        var g = Random.Range(0f, prohibitedColor.g - prohibitedRange) + Random.Range(prohibitedColor.g + prohibitedRange, 1f);
+        var b = Random.Range(0f, prohibitedColor.b - prohibitedRange) + Random.Range(prohibitedColor.b + prohibitedRange, 1f);
+        var a = Random.Range(0.4f, 0.8f);
 
         return new Color(r, g, b, a);
     }
 
     private float GetRandomSpeed() => 1 / ((transform.localScale.y + 0.5f) * 2) + _acceleration;
 
-    private float GetRandomScale() => Random.Range(0.3f, 3.5f);
+    private float GetRandomScale() => Random.Range(0.45f, 3.5f);
     private int GetRandomDamage() => Random.Range(1, 3) + (int)transform.localScale.y;
     private int GetRandomScore()
     {
-        var score = 5 * _currentSpeed - 20 * transform.localScale.y;
+        var score = 5 * _currentSpeed - 18 * transform.localScale.y;
         
         if (score < 1) 
             score = 1;
