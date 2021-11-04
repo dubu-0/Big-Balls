@@ -54,11 +54,8 @@ public class Ball : MonoBehaviour
 
     private void MoveFaster(float passedTime)
     {
-        if ((int)passedTime % 12 == 0)
-        {
+        if ((int)passedTime % 12 == 0) 
             _acceleration += 1;
-            Debug.Log($"Acceleration: {_acceleration}");
-        }
     }
 
     private Color GetRandomColor()
@@ -71,17 +68,19 @@ public class Ball : MonoBehaviour
         return new Color(r, g, b, a);
     }
 
-    private float GetRandomSpeed() => Random.Range(0.2f, 0.8f) * 1 / ((int)transform.localScale.x + 0.1f) + _acceleration;
+    private float GetRandomSpeed() => 1 / ((transform.localScale.y + 0.5f) * 2) + _acceleration;
 
     private float GetRandomScale() => Random.Range(0.3f, 3.5f);
-    private int GetRandomDamage() => Random.Range(1, 3) + (int)transform.localScale.x;
+    private int GetRandomDamage() => Random.Range(1, 3) + (int)transform.localScale.y;
     private int GetRandomScore()
     {
-        var multiplier = _currentSpeed - transform.localScale.x;
+        var score = 5 * _currentSpeed - 20 * transform.localScale.y;
         
-        if (multiplier < 1) 
-            multiplier = 1;
+        if (score < 1) 
+            score = 1;
 
-        return Random.Range(1, 5) * (int)multiplier;
+        Debug.Log((int)score);
+        
+        return (int)score;
     }
 }

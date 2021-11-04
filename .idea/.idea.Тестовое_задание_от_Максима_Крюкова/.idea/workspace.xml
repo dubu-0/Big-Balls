@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Изменился файл после мерджа">
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
     </list>
@@ -27,15 +27,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Prefabs/Ball.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/ProjectSettings/TimeManager.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Emitter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/75/75ef0353/Debug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/ad/ff438090/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Destroyer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthPoints.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20Pvsub40RbGMdNC583ssnUMEna" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -83,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635959246774</updated>
       <workItem from="1635959251193" duration="5457000" />
+      <workItem from="1636030168485" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -112,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635969813225</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Все шарики ускоряются со временем">
+      <created>1635971599708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635971599708</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -147,6 +150,7 @@
     <MESSAGE value="Спавнит шарики в рандомной позиции" />
     <MESSAGE value="Добавились файлы после мержда" />
     <MESSAGE value="Изменился файл после мерджа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменился файл после мерджа" />
+    <MESSAGE value="Все шарики ускоряются со временем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Все шарики ускоряются со временем" />
   </component>
 </project>
