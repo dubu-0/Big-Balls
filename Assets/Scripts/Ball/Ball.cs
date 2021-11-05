@@ -1,3 +1,4 @@
+using System;
 using Level;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ namespace Ball
     [RequireComponent(typeof(SpriteRenderer))]
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private ObjectPool objectPool;
         [SerializeField] private Color forbiddenColor;
         [SerializeField] private int increaseSpeedEverySeconds = 12;
         [SerializeField] private ExplosionFx explosionFx;
@@ -14,13 +16,17 @@ namespace Ball
         private SpriteRenderer _spriteRenderer;
     
         public BallStatsProvider BallStatsProvider { get; private set; }
-    
+        
+        private void OnEnable()
+        {
+            BallStatsProvider = new BallStatsProvider(forbiddenColor, increaseSpeedEverySeconds);
+        }
+
         private void Start()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _scoreUI = FindObjectOfType<Score>();
-        
-            BallStatsProvider = new BallStatsProvider(forbiddenColor, increaseSpeedEverySeconds);
+            
             _spriteRenderer.color = BallStatsProvider.Color;
             transform.localScale *= BallStatsProvider.Diameter;
             
@@ -35,8 +41,8 @@ namespace Ball
         private void OnMouseDown()
         {
             _scoreUI.Add(BallStatsProvider.Score);
-            explosionFx.Play(transform.position);
-            Destroy(gameObject);
+            explosionFx.Play(transform.position, transform.parent);
+            objectPool.ReturnObjectToPool(gameObject);
         }
 
         private void MoveDown()

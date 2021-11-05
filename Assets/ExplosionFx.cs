@@ -21,10 +21,11 @@ public class ExplosionFx : MonoBehaviour
 
     public void SetBall(Ball.Ball ball) => _ball ??= ball;
     
-    public void Play(Vector2 position)
+    public void Play(Vector2 position, Transform parent)
     {
         var clone = Instantiate(myParticleSystem, position, Quaternion.identity);
         clone.Play();
+        clone.transform.parent = parent;
         Destroy(clone.gameObject, clone.main.startLifetime.constantMax);
     }
 

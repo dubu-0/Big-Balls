@@ -1,16 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Level
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Emitter : MonoBehaviour
+    public class ObjectSpawner : MonoBehaviour
     {
-        [SerializeField] private Ball.Ball ballPrefab;
+        [SerializeField] private ObjectPool objectPool;
         [SerializeField] private float rate = 3;
-    
+        
+        private float _expiredTime;
         private float _leftXBound;
         private float _rightXBound;
-        private float _expiredTime;
 
         private void Start()
         {
@@ -25,18 +25,11 @@ namespace Level
 
             if (_expiredTime >= 1 / rate)
             {
-                Emit();
+                var randomX = Random.Range(_leftXBound, _rightXBound);
+                var randomSpawnPosition = new Vector2(randomX, transform.position.y);
+                objectPool.PlacePooledObject(randomSpawnPosition, Quaternion.identity, objectPool.transform);
                 _expiredTime = 0;
             }
-        }
-
-        private void Emit()
-        {
-            var randomX = Random.Range(_leftXBound, _rightXBound);
-            var spawnPosition = new Vector2(randomX, transform.position.y);
-        
-            var ball = Instantiate(ballPrefab, spawnPosition, Quaternion.identity);
-            ball.transform.parent = transform;
         }
     }
 }
