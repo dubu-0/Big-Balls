@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33998dc21289d464dab9bb59ec8e7fc0, type: 3}
   m_Name: HealthPointsData
   m_EditorClassIdentifier: 
-  <Value>k__BackingField: 25
+  defaultValue: 50

@@ -9,13 +9,17 @@ namespace UI
         [SerializeField] private int defaultValue;
         
         private int _currentValue;
-        
-        private ScoreData() => _currentValue = defaultValue;
-        
+
         public Action ScoreChanged { get; set; }
 
         public override string ToString() => _currentValue.ToString();
-        
+
+        public void SetDefaultValue()
+        {
+            _currentValue = defaultValue;
+            ScoreChanged?.Invoke();
+        }
+
         public void Add(int value)
         {
             _currentValue += value;

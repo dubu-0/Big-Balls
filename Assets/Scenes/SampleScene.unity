@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 826917417}
   - component: {fileID: 826917420}
   m_Layer: 0
-  m_Name: Object Returner
+  m_Name: Object Catcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826917416}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -324,7 +324,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &826917418
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}
-  healthPointsData: {fileID: 0}
+  healthPointsData: {fileID: 11400000, guid: a7d97e2aa7232b04aa0f6b74fd689b9a, type: 2}
 --- !u!1 &842533025
 GameObject:
   m_ObjectHideFlags: 0

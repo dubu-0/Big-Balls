@@ -9,10 +9,14 @@ namespace UI
         [SerializeField] private int defaultValue;
         
         private int _currentValue;
-        
-        private HealthPointsData() => _currentValue = defaultValue;
-        
+
         public Action HealthChanged { get; set; }
+
+        public void SetDefaultValue()
+        {
+            _currentValue = defaultValue;
+            HealthChanged?.Invoke();
+        }
 
         public override string ToString() => _currentValue.ToString();
         

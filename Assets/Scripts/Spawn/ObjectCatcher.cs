@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Spawn
 {
-    public class ObjectReturner : MonoBehaviour
+    public class ObjectCatcher : MonoBehaviour
     {
         [SerializeField] private ObjectPool pool;
         [SerializeField] private HealthPointsData healthPointsData;
