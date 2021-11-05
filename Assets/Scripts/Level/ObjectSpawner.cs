@@ -17,6 +17,8 @@ namespace Level
             var bounds = GetComponent<SpriteRenderer>().bounds;
             _leftXBound = bounds.min.x;
             _rightXBound = bounds.max.x;
+            
+            objectPool.Init(transform);
         }
 
         private void Update()
@@ -27,7 +29,7 @@ namespace Level
             {
                 var randomX = Random.Range(_leftXBound, _rightXBound);
                 var randomSpawnPosition = new Vector2(randomX, transform.position.y);
-                objectPool.PlacePooledObject(randomSpawnPosition, Quaternion.identity, objectPool.transform);
+                objectPool.PlacePooledObject(randomSpawnPosition, Quaternion.identity, transform);
                 _expiredTime = 0;
             }
         }

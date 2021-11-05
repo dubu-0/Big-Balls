@@ -48,7 +48,7 @@ namespace Ball
         private void OnMouseDown()
         {
             _scoreUI.Add(BallStatsProvider.Score);
-            explosionFx.Play(transform.position, transform.parent);
+            explosionFx.Play(transform.position, transform);
             objectPool.ReturnObjectToPool(gameObject);
         }
 
