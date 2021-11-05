@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Balls
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 3884289183745972554, guid: 19a41190019dbfa4aa328a3abec3467f, type: 3}
-  parentForObjects: {fileID: 496416609352610655, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
-  amount: 50
+  amount: 100
