@@ -7,6 +7,7 @@ namespace Ball
     [RequireComponent(typeof(SpriteRenderer))]
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private HealthPoints healthPoints;
         [SerializeField] private ObjectPool objectPool;
         [SerializeField] private Color forbiddenColor;
         [SerializeField] private int increaseSpeedEverySeconds = 12;
@@ -38,6 +39,12 @@ namespace Ball
             MoveDown();
         }
 
+        private void OnBecameInvisible()
+        {
+            healthPoints.TakeDamage(BallStatsProvider.Damage);
+            objectPool.ReturnObjectToPool(gameObject);
+        }
+
         private void OnMouseDown()
         {
             _scoreUI.Add(BallStatsProvider.Score);
@@ -47,11 +54,11 @@ namespace Ball
 
         private void MoveDown()
         {
-            var current = transform.position;
-            var target = new Vector3(current.x, -5f);
-            var maxDistanceDelta = BallStatsProvider.Speed * Time.deltaTime;
-        
-            transform.position = Vector3.MoveTowards(current, target, maxDistanceDelta);
+            var currentPosition = transform.position;
+            var delta = BallStatsProvider.Speed * Time.deltaTime;
+            var newPosition = new Vector2(currentPosition.x, currentPosition.y - delta);
+
+            transform.position = newPosition;
         }
     }
 }
