@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Level
+namespace Spawn
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class ObjectSpawner : MonoBehaviour

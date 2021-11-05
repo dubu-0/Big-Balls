@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Level
+namespace Spawn
 {
     [CreateAssetMenu(menuName = "Create ObjectPool", fileName = "ObjectPool", order = 0)]
     public class ObjectPool : ScriptableObject

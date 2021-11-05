@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8669433842409108973}
   - component: {fileID: 8669433842409108976}
   - component: {fileID: 8669433842409108979}
-  - component: {fileID: 8669433842409108978}
+  - component: {fileID: 1139356752}
   m_Layer: 5
   m_Name: Health Points
   m_TagString: Untagged
@@ -79,8 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
---- !u!114 &8669433842409108978
+  m_Text: 20
+--- !u!114 &1139356752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8669433842409108972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33998dc21289d464dab9bb59ec8e7fc0, type: 3}
+  m_Script: {fileID: 11500000, guid: e7e2821ca19e4d21bd2a80a5cc36d822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPointsData: {fileID: 11400000, guid: a7d97e2aa7232b04aa0f6b74fd689b9a, type: 2}
   textComponent: {fileID: 8669433842409108979}
-  healthPoints: 10

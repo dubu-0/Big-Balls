@@ -2,11 +2,11 @@
 
 namespace Ball
 {
-    public class BallStatsProvider
+    public class BallStats
     {
         private readonly BallStatsCalculator _statsCalculator = new BallStatsCalculator();
     
-        public BallStatsProvider(Color forbiddenColor, int increaseSpeedEverySeconds)
+        public BallStats(Color forbiddenColor, int increaseSpeedEverySeconds)
         {
             Acceleration = _statsCalculator.CalculateAcceleration((int)Time.time, increaseSpeedEverySeconds);
             Diameter = _statsCalculator.CalculateRandomDiameter();

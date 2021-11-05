@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4491660673084883458}
   - component: {fileID: 4491660673084883471}
   - component: {fileID: 4491660673084883456}
-  - component: {fileID: 4491660673084883457}
+  - component: {fileID: 2104199946}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &4491660673084883457
+--- !u!114 &2104199946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4491660673084883459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f9288aca80108448a7573e0e7f7ac61, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f99bf04c124ee5abd412366265d6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreData: {fileID: 11400000, guid: e5a6c58a0c092564988895f079c96b07, type: 2}
   textComponent: {fileID: 4491660673084883456}
-  score: 0
