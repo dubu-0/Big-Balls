@@ -1,4 +1,6 @@
-using Level;
+using Fx;
+using Spawn;
+using UI;
 using UnityEngine;
 
 namespace Ball
@@ -6,25 +8,27 @@ namespace Ball
     [RequireComponent(typeof(SpriteRenderer))]
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private ObjectPool objectPool;
         [SerializeField] private Color forbiddenColor;
         [SerializeField] private int increaseSpeedEverySeconds = 12;
         [SerializeField] private ExplosionFx explosionFx;
-    
-        private Score _scoreUI;
+        [SerializeField] private ScoreData scoreData;
+        
         private SpriteRenderer _spriteRenderer;
     
-        public BallStatsProvider BallStatsProvider { get; private set; }
-    
+        public BallStats BallStats { get; private set; }
+        
+        private void OnEnable()
+        {
+            BallStats = new BallStats(forbiddenColor, increaseSpeedEverySeconds);
+        }
+
         private void Start()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-            _scoreUI = FindObjectOfType<Score>();
-        
-            BallStatsProvider = new BallStatsProvider(forbiddenColor, increaseSpeedEverySeconds);
-            _spriteRenderer.color = BallStatsProvider.Color;
-            transform.localScale *= BallStatsProvider.Diameter;
-            
-            explosionFx.SetBall(this);
+
+            _spriteRenderer.color = BallStats.Color;
+            transform.localScale *= BallStats.Diameter;
         }
 
         private void Update()
@@ -34,18 +38,18 @@ namespace Ball
 
         private void OnMouseDown()
         {
-            _scoreUI.Add(BallStatsProvider.Score);
-            explosionFx.Play(transform.position);
-            Destroy(gameObject);
+            scoreData.Add(BallStats.Score);
+            explosionFx.Play(this);
+            objectPool.ReturnObjectToPool(gameObject);
         }
 
         private void MoveDown()
         {
-            var current = transform.position;
-            var target = new Vector3(current.x, -5f);
-            var maxDistanceDelta = BallStatsProvider.Speed * Time.deltaTime;
-        
-            transform.position = Vector3.MoveTowards(current, target, maxDistanceDelta);
+            var currentPosition = transform.position;
+            var delta = BallStats.Speed * Time.deltaTime;
+            var newPosition = new Vector2(currentPosition.x, currentPosition.y - delta);
+
+            transform.position = newPosition;
         }
     }
 }
