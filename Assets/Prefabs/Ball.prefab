@@ -114,6 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPool: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}
   forbiddenColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
-  increaseSpeedEverySeconds: 1
+  increaseSpeedEverySeconds: 8
   explosionFx: {fileID: 7974333344037049198, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
   scoreData: {fileID: 11400000, guid: e5a6c58a0c092564988895f079c96b07, type: 2}

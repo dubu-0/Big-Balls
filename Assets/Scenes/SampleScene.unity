@@ -338,7 +338,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -15.190638}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -349,7 +349,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 36, y: 1}
+  m_Size: {x: 36, y: 31.381275}
   m_EdgeRadius: 0
 --- !u!4 &826917419
 Transform:
@@ -377,8 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e415e371412c46881dafbe4f8aeee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}
-  healthPointsData: {fileID: 11400000, guid: a7d97e2aa7232b04aa0f6b74fd689b9a, type: 2}
+  objectsToCatch: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}
 --- !u!1 &842533025
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,16 +562,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 496416609352610624, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
-      propertyPath: rate
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 496416609352610652, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
       propertyPath: m_Name
       value: Object Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 496416609352610655, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496416609352610655, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 496416609352610655, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
@@ -614,6 +613,10 @@ PrefabInstance:
     - target: {fileID: 496416609352610655, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552526473108882295, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
+      propertyPath: m_Size.x
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 407c3c1acac61104383d4dedc3d68808, type: 3}
@@ -681,10 +684,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842533029}
     m_Modifications:
-    - target: {fileID: 4491660673084883456, guid: 9ef033ea63965314486b4d7fd4234e2d, type: 3}
-      propertyPath: m_Text
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4491660673084883458, guid: 9ef033ea63965314486b4d7fd4234e2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -771,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491660673084883459, guid: 9ef033ea63965314486b4d7fd4234e2d, type: 3}
       propertyPath: m_Name
-      value: Score
+      value: Score View
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef033ea63965314486b4d7fd4234e2d, type: 3}
@@ -784,7 +783,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8669433842409108972, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
       propertyPath: m_Name
-      value: Health Points
+      value: Health Points View
       objectReference: {fileID: 0}
     - target: {fileID: 8669433842409108973, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
       propertyPath: m_Pivot.x

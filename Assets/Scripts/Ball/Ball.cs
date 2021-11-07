@@ -1,34 +1,24 @@
 using Fx;
 using Spawn;
-using UI;
+using UI.Score;
 using UnityEngine;
 
 namespace Ball
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Ball : MonoBehaviour
+    public class Ball : MonoBehaviour, IPoolable
     {
-        [SerializeField] private ObjectPool objectPool;
         [SerializeField] private Color forbiddenColor;
-        [SerializeField] private int increaseSpeedEverySeconds = 12;
         [SerializeField] private ExplosionFx explosionFx;
-        [SerializeField] private ScoreData scoreData;
+        [SerializeField] private ObjectPool objectPool;
         
         private SpriteRenderer _spriteRenderer;
-    
-        public BallStats BallStats { get; private set; }
-        
-        private void OnEnable()
-        {
-            BallStats = new BallStats(forbiddenColor, increaseSpeedEverySeconds);
-        }
 
-        private void Start()
+        public BallStats BallStats { get; private set; }
+
+        private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-
-            _spriteRenderer.color = BallStats.Color;
-            transform.localScale *= BallStats.Diameter;
         }
 
         private void Update()
@@ -38,9 +28,25 @@ namespace Ball
 
         private void OnMouseDown()
         {
-            scoreData.Add(BallStats.Score);
-            explosionFx.Play(this);
-            objectPool.ReturnObjectToPool(gameObject);
+            ReturnToPool(objectPool);
+        }
+
+        public void ReInit(Vector3 position, Quaternion rotation)
+        {
+            BallStats = new BallStats(forbiddenColor);
+            
+            _spriteRenderer.color = BallStats.Color;
+            
+            transform.localScale = Vector3.one * BallStats.Diameter / 2;
+            transform.position = position;
+            transform.rotation = rotation;
+        }
+
+        private void ReturnToPool(ObjectPool pool)
+        {
+            ScoreModel.Add(BallStats.Score);
+            explosionFx.Play(transform.position, BallStats.Color, BallStats.Diameter / 2);
+            pool.ReturnObjectToPool(gameObject);
         }
 
         private void MoveDown()
