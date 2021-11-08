@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class ContinueButton : MonoBehaviour
 {
-    [SerializeField] private Button button;
-    
-    
+    public void DisableRootCanvasOnClick() => transform.root.gameObject.SetActive(false);
+    public void UnpauseOnClick(float timeScale) => Time.timeScale = timeScale;
 }

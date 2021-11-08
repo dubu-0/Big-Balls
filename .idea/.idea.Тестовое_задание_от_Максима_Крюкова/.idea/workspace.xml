@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Микро дополнения">
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Добавил 2 кнопки без логики">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ContinueButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ContinueButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestartButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start Menu.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +40,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/ad/ff438090/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/35/589e13b2/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/UI/Health.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ContinueButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/75/75ef0353/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5406a456cf734443b3d02a7d123287f1299290/c1/916fe0c3/ValueType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/5a/50270211/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -51,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallClickHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5406a456cf734443b3d02a7d123287f1299290/a2/39a04a78/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20Pvsub40RbGMdNC583ssnUMEna" />
@@ -248,7 +250,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636403825229</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Добавил 2 кнопки без логики">
+      <created>1636408116068</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1636408116068</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Добавил 2 кнопки без логики">
+      <created>1636408121653</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1636408121653</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -296,6 +312,7 @@
     <MESSAGE value="Исправил баг с начислением очков и хп" />
     <MESSAGE value="Еще раз небольшой рефакторинг" />
     <MESSAGE value="Микро дополнения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Микро дополнения" />
+    <MESSAGE value="Добавил 2 кнопки без логики" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил 2 кнопки без логики" />
   </component>
 </project>
