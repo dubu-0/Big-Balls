@@ -785,6 +785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Points View
       objectReference: {fileID: 0}
+    - target: {fileID: 8669433842409108972, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8669433842409108973, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

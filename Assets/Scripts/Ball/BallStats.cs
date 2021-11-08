@@ -4,14 +4,11 @@ namespace Ball
 {
     public class BallStats
     {
-        private const float IncreaseAccelerationEveryInit = 0.05f;
-        
-        public BallStats(Color forbiddenColor)
+        public BallStats(Color forbiddenColor, float acceleration)
         {
-            Acceleration += IncreaseAccelerationEveryInit;
             Diameter = CalculateRandomDiameter();
             Color = CalculateRandomColor(forbiddenColor);
-            Speed = CalculateRandomSpeed(Diameter, Acceleration);
+            Speed = CalculateRandomSpeed(Diameter, acceleration);
             Damage = CalculateRandomDamage(Diameter);
             Score = CalculateRandomScore(Diameter, Speed);
         }
@@ -21,7 +18,6 @@ namespace Ball
         public float Diameter { get; }
         public int Damage { get; }
         public int Score { get; }
-        private static float Acceleration { get; set; }
 
         private Color CalculateRandomColor(Color exceptThisColor)
         {

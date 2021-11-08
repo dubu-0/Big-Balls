@@ -3,22 +3,31 @@ using UnityEngine;
 
 namespace UI.Health
 {
-    public static class HealthPointsModel
+    public class HealthPointsModel
     {
-        public static int CurrentValue { get; private set; }
+        private HealthPointsModel() { }
 
-        public static event Action OnHealthChanged;
+        public static HealthPointsModel Instance { get; } = new HealthPointsModel();
+        
+        public int CurrentValue { get; private set; }
 
-        public static void TakeDamage(int value)
+        public event Action OnHealthChanged;
+
+        public void Init(int defaultValue)
+        {
+            if (CurrentValue == 0) 
+                CurrentValue = defaultValue;
+        }
+        
+        public void TakeDamage(int value)
         {
             CurrentValue -= value;
-
             OnHealthChanged?.Invoke();
-            
+
             if (CurrentValue <= 0) 
                 Die();
         }
 
-        private static void Die() => Debug.LogWarning("You are dead");
+        private void Die() => Debug.LogWarning("You are dead");
     }
 }

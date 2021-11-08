@@ -1,6 +1,3 @@
-using Fx;
-using Spawn;
-using UI.Score;
 using UnityEngine;
 
 namespace Ball
@@ -9,12 +6,10 @@ namespace Ball
     public class Ball : MonoBehaviour, IPoolable
     {
         [SerializeField] private Color forbiddenColor;
-        [SerializeField] private ExplosionFx explosionFx;
-        [SerializeField] private ObjectPool objectPool;
-        
+
         private SpriteRenderer _spriteRenderer;
 
-        public BallStats BallStats { get; private set; }
+        public BallStats Stats { get; private set; }
 
         private void Awake()
         {
@@ -26,33 +21,21 @@ namespace Ball
             MoveDown();
         }
 
-        private void OnMouseDown()
-        {
-            ReturnToPool(objectPool);
-        }
-
         public void ReInit(Vector3 position, Quaternion rotation)
         {
-            BallStats = new BallStats(forbiddenColor);
+            Stats = new BallStats(forbiddenColor, BallAcceleration.Acceleration);
             
-            _spriteRenderer.color = BallStats.Color;
+            _spriteRenderer.color = Stats.Color;
             
-            transform.localScale = Vector3.one * BallStats.Diameter / 2;
+            transform.localScale = Vector3.one * Stats.Diameter / 2;
             transform.position = position;
             transform.rotation = rotation;
-        }
-
-        private void ReturnToPool(ObjectPool pool)
-        {
-            ScoreModel.Add(BallStats.Score);
-            explosionFx.Play(transform.position, BallStats.Color, BallStats.Diameter / 2);
-            pool.ReturnObjectToPool(gameObject);
         }
 
         private void MoveDown()
         {
             var currentPosition = transform.position;
-            var delta = BallStats.Speed * Time.deltaTime;
+            var delta = Stats.Speed * Time.deltaTime;
             var newPosition = new Vector2(currentPosition.x, currentPosition.y - delta);
 
             transform.position = newPosition;

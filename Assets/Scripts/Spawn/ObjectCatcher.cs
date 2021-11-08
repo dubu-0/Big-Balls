@@ -10,7 +10,7 @@ namespace Spawn
         private void OnTriggerEnter2D(Collider2D other)
         {
             objectsToCatch.ReturnObjectToPool(other.gameObject);
-            HealthPointsModel.TakeDamage(other.GetComponent<Ball.Ball>().BallStats.Damage);
+            HealthPointsModel.Instance.TakeDamage(other.GetComponent<Ball.Ball>().Stats.Damage);
         }
     }
 }

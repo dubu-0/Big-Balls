@@ -29,10 +29,8 @@ namespace Spawn
 
         public void ReInitObject(Vector2 position, Quaternion rotation)
         {
-            var pooledObject = GetPooledObject();
-            if (pooledObject == null) return;
-            
-            pooledObject.GetComponent<IPoolable>()?.ReInit(position, rotation);
+            if (TryDequeuePooledObject(out var pooled)) 
+                pooled.GetComponent<IPoolable>()?.ReInit(position, rotation);
         }
 
         public void ReturnObjectToPool(GameObject objectToReturn)
@@ -41,13 +39,19 @@ namespace Spawn
             Pool.Enqueue(objectToReturn);
         }
 
-        private GameObject GetPooledObject()
+        private bool TryDequeuePooledObject(out GameObject pooled)
         {
-            if (Pool.Count <= 0) return null;
+            if (Pool.Count > 0)
+            { 
+                pooled = Pool.Dequeue();
+                pooled.SetActive(true);
+            }
+            else
+            {
+                pooled = null;
+            }
             
-            var pooledGameObject = Pool.Dequeue();
-            pooledGameObject.SetActive(true);
-            return pooledGameObject;
+            return pooled;
         }
     }
 }

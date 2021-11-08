@@ -7,16 +7,8 @@ namespace UI.Score
     {
         [SerializeField] private Text textComponent;
 
-        private void OnEnable()
-        {
-            ScoreModel.OnScoreChanged += UpdateText;
-        }
-
-        private void OnDisable()
-        {
-            ScoreModel.OnScoreChanged -= UpdateText;
-        }
-
-        private void UpdateText() => textComponent.text = ScoreModel.CurrentValue.ToString();
+        private void OnEnable() => ScoreModel.Instance.OnScoreChanged += UpdateText;
+        private void OnDisable() => ScoreModel.Instance.OnScoreChanged -= UpdateText;
+        private void UpdateText() => textComponent.text = ScoreModel.Instance.CurrentValue.ToString();
     }
 }

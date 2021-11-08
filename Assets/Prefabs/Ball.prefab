@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3884289183745972559}
   - component: {fileID: 3884289183745972556}
   - component: {fileID: 3884289183745972557}
+  - component: {fileID: 64621202417419934}
+  - component: {fileID: 2992290462121009413}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -112,8 +114,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e91112925173a40b9608312d1eb141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPool: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}
   forbiddenColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
-  increaseSpeedEverySeconds: 8
+--- !u!114 &64621202417419934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884289183745972554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543230ae1e0c8d4448ca8ebaf7cfd45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.035
+--- !u!114 &2992290462121009413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884289183745972554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e3b735757e8f34aa31b8830e516714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   explosionFx: {fileID: 7974333344037049198, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
-  scoreData: {fileID: 11400000, guid: e5a6c58a0c092564988895f079c96b07, type: 2}
+  objectPool: {fileID: 11400000, guid: aeaaff53cd547c046b37fab49ac79e8a, type: 2}

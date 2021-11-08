@@ -7,16 +7,9 @@ namespace UI.Health
     {
         [SerializeField] private Text textComponent;
 
-        private void OnEnable()
-        {
-            HealthPointsModel.OnHealthChanged += UpdateText;
-        }
-
-        private void OnDisable()
-        {
-            HealthPointsModel.OnHealthChanged -= UpdateText;
-        }
-
-        private void UpdateText() => textComponent.text = HealthPointsModel.CurrentValue.ToString();
+        private void Awake() => HealthPointsModel.Instance.Init(int.Parse(textComponent.text));
+        private void OnEnable() => HealthPointsModel.Instance.OnHealthChanged += UpdateText;
+        private void OnDisable() => HealthPointsModel.Instance.OnHealthChanged -= UpdateText;
+        private void UpdateText() => textComponent.text = HealthPointsModel.Instance.CurrentValue.ToString();
     }
 }

@@ -2,13 +2,17 @@ using System;
 
 namespace UI.Score
 {
-    public static class ScoreModel
+    public class ScoreModel
     {
-        public static int CurrentValue { get; private set; }
+        private ScoreModel() { }
 
-        public static event Action OnScoreChanged;
+        public static ScoreModel Instance { get; } = new ScoreModel();
+        
+        public int CurrentValue { get; private set; }
 
-        public static void Add(int value)
+        public event Action OnScoreChanged;
+
+        public void Add(int value)
         {
             CurrentValue += value;
             OnScoreChanged?.Invoke();
