@@ -4,10 +4,10 @@ namespace Ball
 {
     public class BallAcceleration : MonoBehaviour
     {
-        [SerializeField] private float increaseEveryInit = 0.05f;
+        [SerializeField] [Range(0, 1)] private float increaseEveryInit = 0.05f;
         
-        public static float Acceleration { get; private set; }
+        public static float Value { get; private set; }
 
-        private void OnEnable() => Acceleration += increaseEveryInit;
+        private void OnEnable() => Value += increaseEveryInit;
     }
 }

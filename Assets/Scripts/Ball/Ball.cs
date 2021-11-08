@@ -5,12 +5,10 @@ namespace Ball
     [RequireComponent(typeof(SpriteRenderer))]
     public class Ball : MonoBehaviour, IPoolable
     {
-        [SerializeField] private Color forbiddenColor;
-
         private SpriteRenderer _spriteRenderer;
 
-        public BallStats Stats { get; private set; }
-
+        [field: SerializeField] public BallStats Stats { get; private set; }
+        
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,7 +21,7 @@ namespace Ball
 
         public void ReInit(Vector3 position, Quaternion rotation)
         {
-            Stats = new BallStats(forbiddenColor, BallAcceleration.Acceleration);
+            Stats = new BallStats(BallAcceleration.Value);
             
             _spriteRenderer.color = Stats.Color;
             

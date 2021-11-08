@@ -1,13 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Ball
 {
+    [Serializable]
     public class BallStats
     {
-        public BallStats(Color forbiddenColor, float acceleration)
+        [SerializeField] private Color forbiddenColor;
+        [SerializeField] [Range(0, 10)] private int scoreMultiplier = 1;
+        [SerializeField] [Range(0, 10)] private float speedMultiplier = 1;
+        [SerializeField] [Range(0, 10)] private float diameterMultiplier = 1;
+        [SerializeField] [Range(0, 10)] private int damageMultiplier = 1;
+
+        public BallStats(float acceleration)
         {
             Diameter = CalculateRandomDiameter();
-            Color = CalculateRandomColor(forbiddenColor);
+            Color = CalculateRandomColor();
             Speed = CalculateRandomSpeed(Diameter, acceleration);
             Damage = CalculateRandomDamage(Diameter);
             Score = CalculateRandomScore(Diameter, Speed);
@@ -19,17 +28,17 @@ namespace Ball
         public int Damage { get; }
         public int Score { get; }
 
-        private Color CalculateRandomColor(Color exceptThisColor)
+        private Color CalculateRandomColor()
         {
             const float additionalRestriction = 0.05f;
         
-            var r1 = Random.Range(0f, exceptThisColor.r - additionalRestriction);
-            var g1 = Random.Range(0f, exceptThisColor.g - additionalRestriction);
-            var b1 = Random.Range(0f, exceptThisColor.b - additionalRestriction);
+            var r1 = Random.Range(0f, forbiddenColor.r - additionalRestriction);
+            var g1 = Random.Range(0f, forbiddenColor.g - additionalRestriction);
+            var b1 = Random.Range(0f, forbiddenColor.b - additionalRestriction);
         
-            var r2 = Random.Range(exceptThisColor.r + additionalRestriction, 1f);
-            var g2 = Random.Range(exceptThisColor.g + additionalRestriction, 1f);
-            var b2 = Random.Range(exceptThisColor.b + additionalRestriction, 1f);
+            var r2 = Random.Range(forbiddenColor.r + additionalRestriction, 1f);
+            var g2 = Random.Range(forbiddenColor.g + additionalRestriction, 1f);
+            var b2 = Random.Range(forbiddenColor.b + additionalRestriction, 1f);
         
             var a = Random.Range(0.4f, 0.8f);
 
@@ -46,7 +55,7 @@ namespace Ball
 
         private int CalculateRandomScore(float diameter, float currentSpeed)
         {
-            var score = 5 * currentSpeed - 15 * diameter;
+            var score = (5 * currentSpeed - 15 * diameter) * scoreMultiplier;
         
             if (score < 1) 
                 score = 1;
@@ -54,8 +63,8 @@ namespace Ball
             return (int)score;
         }
         
-        private float CalculateRandomSpeed(float diameter, float acceleration) => 1 / diameter * 2 + acceleration;
-        private float CalculateRandomDiameter() => Random.Range(0.45f, 3.5f);
-        private int CalculateRandomDamage(float diameter) => (int)(Random.Range(1f, 3f) * diameter) + 1;
+        private float CalculateRandomSpeed(float diameter, float acceleration) => (1 / diameter * 2) * speedMultiplier + acceleration;
+        private float CalculateRandomDiameter() => Random.Range(0.45f, 3.5f) * diameterMultiplier;
+        private int CalculateRandomDamage(float diameter) => ((int)(Random.Range(1f, 3f) * diameter) + 1) * damageMultiplier;
     }
 }
