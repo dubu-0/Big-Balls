@@ -12,6 +12,7 @@ namespace UI.Health
         public int CurrentValue { get; private set; }
 
         public event Action OnHealthChanged;
+        public event Action OnDied;
 
         public void Init(int defaultValue)
         {
@@ -24,10 +25,11 @@ namespace UI.Health
             CurrentValue -= value;
             OnHealthChanged?.Invoke();
 
-            if (CurrentValue <= 0) 
-                Die();
+            if (CurrentValue <= 0)
+            {
+                CurrentValue = 0;
+                OnDied?.Invoke();
+            }
         }
-
-        private void Die() => Debug.LogWarning("You are dead");
     }
 }
