@@ -1,34 +1,19 @@
-using Fx;
-using Spawn;
-using UI;
 using UnityEngine;
 
 namespace Ball
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Ball : MonoBehaviour
+    public class Ball : MonoBehaviour, IPoolable
     {
-        [SerializeField] private ObjectPool objectPool;
         [SerializeField] private Color forbiddenColor;
-        [SerializeField] private int increaseSpeedEverySeconds = 12;
-        [SerializeField] private ExplosionFx explosionFx;
-        [SerializeField] private ScoreData scoreData;
-        
-        private SpriteRenderer _spriteRenderer;
-    
-        public BallStats BallStats { get; private set; }
-        
-        private void OnEnable()
-        {
-            BallStats = new BallStats(forbiddenColor, increaseSpeedEverySeconds);
-        }
 
-        private void Start()
+        private SpriteRenderer _spriteRenderer;
+
+        public BallStats Stats { get; private set; }
+
+        private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-
-            _spriteRenderer.color = BallStats.Color;
-            transform.localScale *= BallStats.Diameter;
         }
 
         private void Update()
@@ -36,17 +21,21 @@ namespace Ball
             MoveDown();
         }
 
-        private void OnMouseDown()
+        public void ReInit(Vector3 position, Quaternion rotation)
         {
-            scoreData.Add(BallStats.Score);
-            explosionFx.Play(this);
-            objectPool.ReturnObjectToPool(gameObject);
+            Stats = new BallStats(forbiddenColor, BallAcceleration.Acceleration);
+            
+            _spriteRenderer.color = Stats.Color;
+            
+            transform.localScale = Vector3.one * Stats.Diameter / 2;
+            transform.position = position;
+            transform.rotation = rotation;
         }
 
         private void MoveDown()
         {
             var currentPosition = transform.position;
-            var delta = BallStats.Speed * Time.deltaTime;
+            var delta = Stats.Speed * Time.deltaTime;
             var newPosition = new Vector2(currentPosition.x, currentPosition.y - delta);
 
             transform.position = newPosition;

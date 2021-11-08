@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8669433842409108979}
   - component: {fileID: 1139356752}
   m_Layer: 5
-  m_Name: Health Points
+  m_Name: Health Points View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

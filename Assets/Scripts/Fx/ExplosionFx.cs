@@ -8,34 +8,21 @@ namespace Fx
         [SerializeField] private int particlesCount = 50;
 
         private static ParticleSystem _myParticleSystem;
+        private static ParticleSystem.MainModule _mainModule;
 
         private void Start()
         {
             _myParticleSystem = GetComponent<ParticleSystem>();
+            _mainModule = _myParticleSystem.main;
         }
 
-        public void Play(Ball.Ball ball)
+        public void Play(Vector3 position, Color color, float size)
         {
-            ChangeParticlesColorTo(ball);
-            ChangeParticlesSizeTo(ball);
-            ChangeParticlesEmitPositionTo(ball);
+            _mainModule.startColor = color;
+            _mainModule.startSize = size;
             
+            _myParticleSystem.transform.localPosition = position;
             _myParticleSystem.Emit(particlesCount);
-        }
-
-        private void ChangeParticlesEmitPositionTo(Ball.Ball ball) => 
-            _myParticleSystem.transform.localPosition = ball.transform.position;
-
-        private void ChangeParticlesColorTo(Ball.Ball ball)
-        {
-            var mainModule = _myParticleSystem.main;
-            mainModule.startColor = ball.BallStats.Color;   
-        }
-
-        private void ChangeParticlesSizeTo(Ball.Ball ball)
-        {
-            var mainModule = _myParticleSystem.main;
-            mainModule.startSize = ball.BallStats.Diameter / 2;
         }
     }
 }

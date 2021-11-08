@@ -2,7 +2,7 @@
 
 namespace Spawn
 {
-    [RequireComponent(typeof(SpriteRenderer))]
+    [RequireComponent(typeof(BoxCollider2D))]
     public class ObjectSpawner : MonoBehaviour
     {
         [SerializeField] private ObjectPool objectPool;
@@ -14,7 +14,7 @@ namespace Spawn
 
         private void Start()
         {
-            var bounds = GetComponent<SpriteRenderer>().bounds;
+            var bounds = GetComponent<BoxCollider2D>().bounds;
             _leftXBound = bounds.min.x;
             _rightXBound = bounds.max.x;
             
@@ -29,7 +29,7 @@ namespace Spawn
             {
                 var randomX = Random.Range(_leftXBound, _rightXBound);
                 var randomSpawnPosition = new Vector2(randomX, transform.position.y);
-                objectPool.PlacePooledObject(randomSpawnPosition, Quaternion.identity, transform);
+                objectPool.ReInitObject(randomSpawnPosition, Quaternion.identity);
                 _expiredTime = 0;
             }
         }

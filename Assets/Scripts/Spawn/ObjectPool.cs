@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Ball;
 using UnityEngine;
 
 namespace Spawn
@@ -10,21 +11,26 @@ namespace Spawn
         [SerializeField] private int amount = 50;
 
         private static readonly Queue<GameObject> Pool = new Queue<GameObject>();
+        private static bool _initialized;
 
         public void Init(Transform parentForObjects)
         {
+            if (_initialized) return;
+            
             for (var i = 0; i < amount; i++)
             {
                 var objectInstance = Instantiate(objectToPool, parentForObjects, true);
                 objectInstance.SetActive(false);
                 Pool.Enqueue(objectInstance);
             }
+
+            _initialized = true;
         }
 
-        public void PlacePooledObject(Vector2 position, Quaternion rotation, Transform parentForObjects)
+        public void ReInitObject(Vector2 position, Quaternion rotation)
         {
-            var ball = GetPooledObject();
-            InitPooledObject(ball, position, rotation, parentForObjects);
+            if (TryDequeuePooledObject(out var pooled)) 
+                pooled.GetComponent<IPoolable>()?.ReInit(position, rotation);
         }
 
         public void ReturnObjectToPool(GameObject objectToReturn)
@@ -33,26 +39,19 @@ namespace Spawn
             Pool.Enqueue(objectToReturn);
         }
 
-        private GameObject GetPooledObject()
+        private bool TryDequeuePooledObject(out GameObject pooled)
         {
             if (Pool.Count > 0)
+            { 
+                pooled = Pool.Dequeue();
+                pooled.SetActive(true);
+            }
+            else
             {
-                var pooledGameObject = Pool.Dequeue();
-                pooledGameObject.SetActive(true);
-                return pooledGameObject;
+                pooled = null;
             }
             
-            return null;
-        }
-
-        private void InitPooledObject(GameObject pooledObject, Vector2 position, Quaternion rotation, Transform parentForObjects)
-        {
-            if (pooledObject)
-            {
-                pooledObject.transform.position = position;
-                pooledObject.transform.rotation = rotation;
-                pooledObject.transform.parent = parentForObjects;
-            }
+            return pooled;
         }
     }
 }
