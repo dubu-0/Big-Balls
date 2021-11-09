@@ -17,5 +17,11 @@ namespace UI.Score
             CurrentValue += value;
             OnScoreChanged?.Invoke();
         }
+
+        public void ToDefault()
+        {
+            CurrentValue = 0;
+            OnScoreChanged?.Invoke();
+        }
     }
 }

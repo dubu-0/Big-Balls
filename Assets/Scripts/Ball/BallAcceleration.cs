@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Ball
@@ -9,5 +10,6 @@ namespace Ball
         public static float Value { get; private set; }
 
         private void OnEnable() => Value += increaseEveryInit;
+        private void OnDestroy() => Value = 0;
     }
 }
