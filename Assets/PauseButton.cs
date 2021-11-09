@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class PauseButton : MonoBehaviour
 {
     [SerializeField] private Button button;
+    [SerializeField] private BoxCollider2D cover;
     
     private const string Play = nameof(Play);
     private const string Paused = nameof(Paused);
@@ -15,6 +16,7 @@ public class PauseButton : MonoBehaviour
     {
         _buttonTextComponent = button.GetComponentInChildren<Text>();
         InitButton();
+        cover.enabled = false;
     }
     
     public void SwitchGameStateOnClick()
@@ -42,12 +44,14 @@ public class PauseButton : MonoBehaviour
     private void Pause()
     {
         Time.timeScale = 0;
+        cover.enabled = true;
         _buttonTextComponent.text = Paused;
     }
 
     private void Unpause()
     {
         Time.timeScale = 1;
+        cover.enabled = false;
         _buttonTextComponent.text = Unpaused;
     }
 }

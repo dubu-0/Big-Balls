@@ -4,9 +4,9 @@ namespace Ball
 {
     public class BallStats
     {
-        private const int ScoreMultiplier = 5;
-        private const float SpeedMultiplier = 1;
-        private const float DiameterMultiplier = 1.5f;
+        private const int ScoreMultiplier = 8;
+        private const float SpeedMultiplier = 0.8f;
+        private const float DiameterMultiplier = 1.75f;
         private const int DamageMultiplier = 1;
         private readonly Color _forbiddenColor = new Color(0.8156863f, 0.8862746f, 1f);
         
@@ -61,7 +61,7 @@ namespace Ball
         }
         
         private float CalculateRandomSpeed(float diameter, float acceleration) => 1 / diameter * 2 * SpeedMultiplier + acceleration;
-        private float CalculateRandomDiameter() => Random.Range(0.45f, 3.5f) * DiameterMultiplier;
+        private float CalculateRandomDiameter() => Random.Range(0.6f, 3.5f) * DiameterMultiplier;
         private int CalculateRandomDamage(float diameter) => ((int)(Random.Range(1f, 3f) * diameter) + 1) * DamageMultiplier;
     }
 }
