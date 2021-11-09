@@ -1610,6 +1610,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8669433842409108979, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
+      propertyPath: m_Text
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669433842409108979, guid: bac0b68a007b5be40a53b85a6adfc3fe, type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 80
       objectReference: {fileID: 0}

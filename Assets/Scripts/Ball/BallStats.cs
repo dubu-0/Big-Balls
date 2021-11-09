@@ -52,12 +52,12 @@ namespace Ball
 
         private int CalculateRandomScore(float diameter, float currentSpeed)
         {
-            var score = (5 * currentSpeed - 15 * diameter) * ScoreMultiplier;
+            var score = 8 * currentSpeed - 12 * diameter;
         
             if (score < 1) 
                 score = 1;
 
-            return (int)score;
+            return (int)score * ScoreMultiplier;
         }
         
         private float CalculateRandomSpeed(float diameter, float acceleration) => 1 / diameter * 2 * SpeedMultiplier + acceleration;

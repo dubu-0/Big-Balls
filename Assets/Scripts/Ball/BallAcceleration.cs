@@ -1,4 +1,4 @@
-using System;
+using UI.Health;
 using UnityEngine;
 
 namespace Ball
@@ -9,7 +9,13 @@ namespace Ball
         
         public static float Value { get; private set; }
 
-        private void OnEnable() => Value += increaseEveryInit;
+        private void OnEnable()
+        {
+            Value += increaseEveryInit;
+            HealthPointsModel.Instance.OnDied += StopAccelerating;
+        }
+        private void OnDisable() => HealthPointsModel.Instance.OnDied -= StopAccelerating;
         private void OnDestroy() => Value = 0;
+        private void StopAccelerating() => increaseEveryInit = 0;
     }
 }

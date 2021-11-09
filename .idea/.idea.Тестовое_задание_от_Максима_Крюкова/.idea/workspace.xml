@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Пул теперь обновляется, но ускорение остается прежним">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallAcceleration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallAcceleration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" afterDir="false" />
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallStats.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,7 @@
       <workItem from="1636150996842" duration="2073000" />
       <workItem from="1636298576796" duration="17530000" />
       <workItem from="1636365207387" duration="24634000" />
-      <workItem from="1636474066515" duration="11544000" />
+      <workItem from="1636474066515" duration="11814000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -311,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636488696909</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп">
+      <created>1636489428800</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1636489428800</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -367,6 +371,7 @@
     <MESSAGE value="Хп больше не уходит в минус на UI" />
     <MESSAGE value="Кнопка рестарт теперь рабочая, другой баг - после рестарта пустой пул объектов" />
     <MESSAGE value="Пул теперь обновляется, но ускорение остается прежним" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пул теперь обновляется, но ускорение остается прежним" />
+    <MESSAGE value="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп" />
   </component>
 </project>
