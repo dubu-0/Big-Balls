@@ -7,8 +7,8 @@ namespace UI.Health
         private HealthPointsModel() { }
 
         public static HealthPointsModel Instance { get; } = new HealthPointsModel();
-        
-        public int? CurrentValue { get; private set; }
+
+        public int? CurrentValue { get; private set; } = 0;
 
         public event Action OnHealthChanged;
         public event Action OnDied;
@@ -22,12 +22,14 @@ namespace UI.Health
         public void TakeDamage(int? value)
         {
             CurrentValue -= value;
-            OnHealthChanged?.Invoke();
 
-            if (!(CurrentValue <= 0)) return;
+            if (CurrentValue <= 0)
+            {
+                CurrentValue = 0;
+                OnDied?.Invoke();
+            }
             
-            CurrentValue = 0;
-            OnDied?.Invoke();
+            OnHealthChanged?.Invoke();
         }
     }
 }

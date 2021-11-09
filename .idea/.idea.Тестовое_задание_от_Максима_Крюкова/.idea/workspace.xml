@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил черные шарики" />
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Health/HealthPointsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Health/HealthPointsModel.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +102,7 @@
       <workItem from="1636150996842" duration="2073000" />
       <workItem from="1636298576796" duration="17530000" />
       <workItem from="1636365207387" duration="24634000" />
-      <workItem from="1636474066515" duration="7955000" />
+      <workItem from="1636474066515" duration="9293000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -276,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636484743815</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)">
+      <created>1636486507705</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636486507705</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -328,6 +338,7 @@
     <MESSAGE value="Добавил Play/Pause" />
     <MESSAGE value="Добавил нерабочую кнопку рестарта. Текущие баги: нерабочая кнопка рестарта, хп уходит в минус на UI, черные шарики, во время паузы можно нажимать на шарики. Осталось добавить: текущий и лучший результаты." />
     <MESSAGE value="Исправил черные шарики" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил черные шарики" />
+    <MESSAGE value="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)" />
   </component>
 </project>
