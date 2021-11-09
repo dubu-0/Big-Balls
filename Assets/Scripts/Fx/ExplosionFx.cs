@@ -20,7 +20,6 @@ namespace Fx
         {
             _mainModule.startColor = color;
             _mainModule.startSize = size;
-            
             _myParticleSystem.transform.localPosition = position;
             _myParticleSystem.Emit(particlesToEmit);
         }

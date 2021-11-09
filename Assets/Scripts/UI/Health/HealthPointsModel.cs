@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 namespace UI.Health
 {
@@ -9,7 +8,7 @@ namespace UI.Health
 
         public static HealthPointsModel Instance { get; } = new HealthPointsModel();
         
-        public int CurrentValue { get; private set; }
+        public int? CurrentValue { get; private set; }
 
         public event Action OnHealthChanged;
         public event Action OnDied;
@@ -20,16 +19,15 @@ namespace UI.Health
                 CurrentValue = defaultValue;
         }
         
-        public void TakeDamage(int value)
+        public void TakeDamage(int? value)
         {
             CurrentValue -= value;
             OnHealthChanged?.Invoke();
 
-            if (CurrentValue <= 0)
-            {
-                CurrentValue = 0;
-                OnDied?.Invoke();
-            }
+            if (!(CurrentValue <= 0)) return;
+            
+            CurrentValue = 0;
+            OnDied?.Invoke();
         }
     }
 }

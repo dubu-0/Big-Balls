@@ -321,10 +321,10 @@ RectTransform:
   m_Father: {fileID: 566875025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: 441}
-  m_SizeDelta: {x: 113.83, y: 59.56}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000095367, y: -98.5}
+  m_SizeDelta: {x: 113.83, y: 59.559998}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &538868591
 MonoBehaviour:
@@ -1214,6 +1214,14 @@ PrefabInstance:
     - target: {fileID: 1621303717872700582, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
       propertyPath: m_Name
       value: Explosion Fx
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627178411862683028, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627178411862683028, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.81568635
       objectReference: {fileID: 0}
     - target: {fileID: 2974291293933598645, guid: 1e0c207136993894990c73407d3ec4c4, type: 3}
       propertyPath: m_RootOrder

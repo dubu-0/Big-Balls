@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Ball
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Ball : MonoBehaviour, IPoolable
+    public class Ball : MonoBehaviour, IPoolable, IDamageDealer<int>
     {
         private SpriteRenderer _spriteRenderer;
 
@@ -13,18 +13,20 @@ namespace Ball
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
-
+        
         private void Update()
         {
             MoveDown();
         }
 
+        public int DealDamage() => Stats.Damage;
+        
         public void ReInit(Vector3 position, Quaternion rotation)
         {
             Stats = new BallStats(BallAcceleration.Value);
             
             _spriteRenderer.color = Stats.Color;
-            
+
             transform.localScale = Vector3.one * Stats.Diameter / 2;
             transform.position = position;
             transform.rotation = rotation;
