@@ -11,20 +11,15 @@ namespace Spawn
         [SerializeField] private int amount = 50;
 
         private static readonly Queue<GameObject> Pool = new Queue<GameObject>();
-        private static bool _initialized;
 
         public void Init(Transform parentForObjects)
         {
-            if (_initialized) return;
-            
             for (var i = 0; i < amount; i++)
             {
                 var objectInstance = Instantiate(objectToPool, parentForObjects, true);
                 objectInstance.SetActive(false);
                 Pool.Enqueue(objectInstance);
             }
-
-            _initialized = true;
         }
 
         public void ReInitObject(Vector2 position, Quaternion rotation)
