@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallStats.cs" afterDir="false" />
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил все проблемы">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Points View.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Points View.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Object Spawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Object Spawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Score View.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Score View.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestartButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/ad/ff438090/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/35/589e13b2/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BestScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Prefabs/Ball.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
@@ -103,7 +113,7 @@
       <workItem from="1636150996842" duration="2073000" />
       <workItem from="1636298576796" duration="17530000" />
       <workItem from="1636365207387" duration="24634000" />
-      <workItem from="1636474066515" duration="11814000" />
+      <workItem from="1636474066515" duration="15127000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -315,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636489428800</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Исправил все проблемы">
+      <created>1636489788669</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1636489788669</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -347,7 +364,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Спавнит шарики в рандомной позиции" />
     <MESSAGE value="Добавились файлы после мержда" />
     <MESSAGE value="Изменился файл после мерджа" />
     <MESSAGE value="Все шарики ускоряются со временем" />
@@ -372,6 +388,7 @@
     <MESSAGE value="Кнопка рестарт теперь рабочая, другой баг - после рестарта пустой пул объектов" />
     <MESSAGE value="Пул теперь обновляется, но ускорение остается прежним" />
     <MESSAGE value="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп" />
+    <MESSAGE value="Исправил все проблемы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил все проблемы" />
   </component>
 </project>

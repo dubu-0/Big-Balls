@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI.Health;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Score
