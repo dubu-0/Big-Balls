@@ -5,7 +5,7 @@ namespace Fx
     [RequireComponent(typeof(ParticleSystem))]
     public class ExplosionFx : MonoBehaviour
     {
-        [SerializeField] private int particlesCount = 50;
+        [SerializeField] [Range(0, 200)] private int particlesToEmit = 50;
 
         private static ParticleSystem _myParticleSystem;
         private static ParticleSystem.MainModule _mainModule;
@@ -20,9 +20,8 @@ namespace Fx
         {
             _mainModule.startColor = color;
             _mainModule.startSize = size;
-            
             _myParticleSystem.transform.localPosition = position;
-            _myParticleSystem.Emit(particlesCount);
+            _myParticleSystem.Emit(particlesToEmit);
         }
     }
 }

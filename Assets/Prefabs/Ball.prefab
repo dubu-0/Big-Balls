@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e91112925173a40b9608312d1eb141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forbiddenColor: {r: 0.81568635, g: 0.8862746, b: 1, a: 1}
 --- !u!114 &64621202417419934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543230ae1e0c8d4448ca8ebaf7cfd45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increment: 0.035
+  increaseEveryInit: 0.03
 --- !u!114 &2992290462121009413
 MonoBehaviour:
   m_ObjectHideFlags: 0

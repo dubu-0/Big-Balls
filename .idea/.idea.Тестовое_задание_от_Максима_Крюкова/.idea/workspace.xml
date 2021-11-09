@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="" />
+    <list default="true" id="0c212443-f833-43b1-968a-4bdcd63a4983" name="Changes" comment="Исправил все проблемы">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Тестовое_задание_от_Максима_Крюкова/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Points View.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Health Points View.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Object Spawner.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Object Spawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Score View.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Score View.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestartButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestartButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Score/ScoreView.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="пост_обработка" />
+    <option name="BRANCH" value="UI_Play_Restart_Pause" />
     <option name="OPTIONS">
       <set>
         <option value="NO_FF" />
@@ -22,6 +33,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -34,7 +46,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07c89f7520694139991332d3cf930d4813bc00/ad/ff438090/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/35/589e13b2/Queue`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BestScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Prefabs/Ball.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Максим2/Documents/repos_unity/2D/Тестовые задания/Тестовое_задание_от_Максима_Крюкова/Assets/Scripts/Ball/Ball.cs" root0="SKIP_HIGHLIGHTING" />
@@ -76,10 +88,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13484">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13484" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -101,6 +113,7 @@
       <workItem from="1636150996842" duration="2073000" />
       <workItem from="1636298576796" duration="17530000" />
       <workItem from="1636365207387" duration="24634000" />
+      <workItem from="1636474066515" duration="15127000" />
     </task>
     <task id="LOCAL-00001" summary="Спавнит шарики в рандомной позиции">
       <created>1635962115141</created>
@@ -235,7 +248,91 @@
       <option name="project" value="LOCAL" />
       <updated>1636318028759</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Микро дополнения">
+      <created>1636403825229</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636403825229</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Добавил 2 кнопки без логики">
+      <created>1636408116068</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1636408116068</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Добавил 2 кнопки без логики">
+      <created>1636408121653</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1636408121653</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Добавил Play/Pause">
+      <created>1636411739405</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1636411739405</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Добавил нерабочую кнопку рестарта. Текущие баги: нерабочая кнопка рестарта, хп уходит в минус на UI, черные шарики, во время паузы можно нажимать на шарики. Осталось добавить: текущий и лучший результаты.">
+      <created>1636413750757</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636413750757</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Исправил черные шарики">
+      <created>1636484743815</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1636484743815</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)">
+      <created>1636486507705</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636486507705</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Хп больше не уходит в минус на UI">
+      <created>1636487041774</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636487041774</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Кнопка рестарт теперь рабочая, другой баг - после рестарта пустой пул объектов">
+      <created>1636488066593</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1636488066593</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Пул теперь обновляется, но ускорение остается прежним">
+      <created>1636488696909</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1636488696909</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп">
+      <created>1636489428800</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1636489428800</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Исправил все проблемы">
+      <created>1636489788669</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1636489788669</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -267,7 +364,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Спавнит шарики в рандомной позиции" />
     <MESSAGE value="Добавились файлы после мержда" />
     <MESSAGE value="Изменился файл после мерджа" />
     <MESSAGE value="Все шарики ускоряются со временем" />
@@ -282,6 +378,17 @@
     <MESSAGE value="Небольшой рефакторинг" />
     <MESSAGE value="Исправил баг с начислением очков и хп" />
     <MESSAGE value="Еще раз небольшой рефакторинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="Еще раз небольшой рефакторинг" />
+    <MESSAGE value="Микро дополнения" />
+    <MESSAGE value="Добавил 2 кнопки без логики" />
+    <MESSAGE value="Добавил Play/Pause" />
+    <MESSAGE value="Добавил нерабочую кнопку рестарта. Текущие баги: нерабочая кнопка рестарта, хп уходит в минус на UI, черные шарики, во время паузы можно нажимать на шарики. Осталось добавить: текущий и лучший результаты." />
+    <MESSAGE value="Исправил черные шарики" />
+    <MESSAGE value="Исправил баг - во время паузы можно нажимать на шарики (теперь нельзя)" />
+    <MESSAGE value="Хп больше не уходит в минус на UI" />
+    <MESSAGE value="Кнопка рестарт теперь рабочая, другой баг - после рестарта пустой пул объектов" />
+    <MESSAGE value="Пул теперь обновляется, но ускорение остается прежним" />
+    <MESSAGE value="Исправил ускорение и заодно хп, другая проблема - мало начисляется очков и мало хп у игрока, также надо отключать ускорение когда 0 хп" />
+    <MESSAGE value="Исправил все проблемы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил все проблемы" />
   </component>
 </project>

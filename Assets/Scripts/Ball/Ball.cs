@@ -3,30 +3,30 @@ using UnityEngine;
 namespace Ball
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    public class Ball : MonoBehaviour, IPoolable
+    public class Ball : MonoBehaviour, IPoolable, IDamageDealer<int>
     {
-        [SerializeField] private Color forbiddenColor;
-
         private SpriteRenderer _spriteRenderer;
 
-        public BallStats Stats { get; private set; }
-
+        [field: SerializeField] public BallStats Stats { get; private set; }
+        
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
-
+        
         private void Update()
         {
             MoveDown();
         }
 
+        public int DealDamage() => Stats.Damage;
+        
         public void ReInit(Vector3 position, Quaternion rotation)
         {
-            Stats = new BallStats(forbiddenColor, BallAcceleration.Acceleration);
+            Stats = new BallStats(BallAcceleration.Value);
             
             _spriteRenderer.color = Stats.Color;
-            
+
             transform.localScale = Vector3.one * Stats.Diameter / 2;
             transform.position = position;
             transform.rotation = rotation;

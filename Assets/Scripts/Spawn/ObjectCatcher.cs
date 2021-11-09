@@ -1,3 +1,4 @@
+using Ball;
 using UI.Health;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace Spawn
         private void OnTriggerEnter2D(Collider2D other)
         {
             objectsToCatch.ReturnObjectToPool(other.gameObject);
-            HealthPointsModel.Instance.TakeDamage(other.GetComponent<Ball.Ball>().Stats.Damage);
+            HealthPointsModel.Instance.TakeDamage(other.GetComponent<IDamageDealer<int>>()?.DealDamage());
         }
     }
 }
